@@ -1,0 +1,149 @@
+after-startup-command = ['exec-and-forget open -a Ghostty']
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = "move-mouse window-lazy-center"
+
+automatically-unhide-macos-hidden-apps = true
+
+[key-mapping]
+    preset = 'qwerty'
+
+[gaps]
+    inner.horizontal = 0
+    inner.vertical =   0
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
+
+[mode.main.binding]
+    alt-slash = 'layout tiles horizontal vertical'
+    alt-comma = 'layout accordion horizontal vertical'
+
+    alt-h = 'focus left'
+    alt-j = 'focus down'
+    alt-k = 'focus up'
+    alt-l = 'focus right'
+
+    alt-shift-h = 'move left'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-l = 'move right'
+    alt-shift-f = 'fullscreen'
+
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
+
+    alt-1 = 'workspace 1'
+    alt-a = 'workspace A'
+    alt-b = 'workspace B'
+    alt-d = 'workspace D'
+    alt-e = 'workspace E'
+    alt-n = 'workspace N'
+    alt-s = 'workspace S'
+    alt-w = 'workspace W'
+    alt-x = 'workspace X'
+
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-a = 'move-node-to-workspace A'
+    alt-shift-b = 'move-node-to-workspace B'
+    alt-shift-d = 'move-node-to-workspace D'
+    alt-shift-e = 'move-node-to-workspace E'
+    alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-x = 'move-node-to-workspace X'
+
+    alt-tab = 'workspace-back-and-forth'
+    alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+    alt-g = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh'
+
+    alt-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+    esc = ['reload-config', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main']
+    f = ['layout floating tiling', 'mode main']
+    backspace = ['close-all-windows-but-current', 'mode main']
+
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
+
+    down = 'volume down'
+    up = 'volume up'
+    shift-down = ['volume set 0', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = "move-node-to-workspace B"
+
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = ['move-node-to-workspace E', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = ['move-node-to-workspace E', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'NMPQX8QV9B.Earnit'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['move-node-to-workspace S', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = ['move-node-to-workspace S', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'com.github.xournalpp'
+run = "move-node-to-workspace X"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = "move-node-to-workspace N"
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = ['move-node-to-workspace W', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'com.figma.Desktop.dua'
+run = ['move-node-to-workspace D', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'com.mongodb.compass'
+run = ['move-node-to-workspace D', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'org.pgadmin.pgadmin4'
+run = ['move-node-to-workspace D', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.StorageExplorer'
+run = ['move-node-to-workspace D', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'org.filezilla-project.filezilla'
+run = ['move-node-to-workspace D', 'layout accordion']
