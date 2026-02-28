@@ -31,3 +31,8 @@ config-file = ?shaders.conf
 
 keybind = cmd+shift+space=toggle_quick_terminal
 keybind = cmd+shift+comma=reload_config
+
+keybind = super+ctrl+h=goto_split:left
+keybind = super+ctrl+j=goto_split:down
+keybind = super+ctrl+k=goto_split:up
+keybind = super+ctrl+l=goto_split:right
