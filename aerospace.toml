@@ -51,6 +51,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-d = 'workspace D'
     alt-e = 'workspace E'
     alt-n = 'workspace N'
+    alt-r = 'workspace R'
     alt-s = 'workspace S'
     alt-t = 'workspace T'
     alt-w = 'workspace W'
@@ -65,6 +66,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-e = 'move-node-to-workspace E'
     alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-r = 'move-node-to-workspace R'
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
     alt-shift-w = 'move-node-to-workspace W'
@@ -130,7 +132,7 @@ run = "move-node-to-workspace X"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
-run = "move-node-to-workspace N"
+run = "move-node-to-workspace R"
 
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
