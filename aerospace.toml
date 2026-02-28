@@ -43,22 +43,30 @@ automatically-unhide-macos-hidden-apps = true
     alt-equal = 'resize smart +50'
 
     alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
     alt-a = 'workspace A'
     alt-b = 'workspace B'
     alt-d = 'workspace D'
     alt-e = 'workspace E'
     alt-n = 'workspace N'
     alt-s = 'workspace S'
+    alt-t = 'workspace T'
     alt-w = 'workspace W'
     alt-x = 'workspace X'
 
     alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
     alt-shift-a = 'move-node-to-workspace A'
     alt-shift-b = 'move-node-to-workspace B'
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-e = 'move-node-to-workspace E'
     alt-shift-n = 'move-node-to-workspace N'
     alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-t = 'move-node-to-workspace T'
     alt-shift-w = 'move-node-to-workspace W'
     alt-shift-x = 'move-node-to-workspace X'
 
@@ -86,7 +94,7 @@ automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = "move-node-to-workspace 1"
+run = "move-node-to-workspace T"
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
