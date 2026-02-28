@@ -73,7 +73,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-    alt-g = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh'
+    alt-0 = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh'
 
     alt-shift-semicolon = 'mode service'
 

@@ -1,12 +1,14 @@
 #!/bin/bash
-SHADER_LINK="$HOME/.config/ghostty/shaders.conf"
-SHADER_SOURCE="$HOME/Development/dotfiles/ghosty-shaders.conf"
+CONF_PATH="$HOME/Library/Application Support/com.mitchellh.ghostty/shaders.conf"
+SHADER="$HOME/Development/dotfiles/shaders/starfield-colors.glsl"
 
-if [ -e "$SHADER_LINK" ]; then
-    rm "$SHADER_LINK"
+if [ -e "$CONF_PATH" ]; then
+    rm "$CONF_PATH"
 else
-    ln -sf "$SHADER_SOURCE" "$SHADER_LINK"
+    cat > "$CONF_PATH" <<EOF
+custom-shader = $SHADER
+custom-shader-animation = true
+EOF
 fi
 
-sleep 0.2
-osascript -e 'tell application "System Events" to keystroke "," using {command down, shift down}'
+pkill -USR2 ghostty

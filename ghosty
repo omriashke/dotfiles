@@ -1,6 +1,6 @@
 font-family = "Hack Nerd Font Mono"
 font-thicken = true
-theme = catppuccin-mocha
+theme = Cursor Dark
 title = " "
 
 cursor-style = block
@@ -22,7 +22,7 @@ font-size = 14
 quick-terminal-animation-duration = 0
 quick-terminal-screen = main
 
-shell-integration-features = no-cursor
+shell-integration-features = true
 
 link-url = true
 

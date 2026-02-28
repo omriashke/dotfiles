@@ -33,8 +33,8 @@ fi
 mkdir -p "$HOME/.ssh"
 chmod 700 "$HOME/.ssh"
 
-link "ghosty"              "$HOME/.config/ghostty/config"
-link "ghosty-shaders.conf" "$HOME/.config/ghostty/shaders.conf"
+link "ghosty"              "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+link "ghosty-shaders.conf" "$HOME/Library/Application Support/com.mitchellh.ghostty/shaders.conf"
 link "aerospace.toml"      "$HOME/.config/aerospace/aerospace.toml"
 link ".zshrc"              "$HOME/.zshrc"
 link ".gitconfig"          "$HOME/.gitconfig"
@@ -44,5 +44,8 @@ link "sync.sh"             "$HOME/.local/bin/config-sync"
 
 chmod +x "$DOTFILES/sync.sh"
 chmod +x "$DOTFILES/toggle-ghostty-shader.sh"
+
+aerospace reload-config
+pkill -USR2 ghostty
 
 echo "dotfiles synced"
