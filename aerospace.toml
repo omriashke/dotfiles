@@ -162,3 +162,7 @@ run = ['move-node-to-workspace D', 'layout accordion']
 [[on-window-detected]]
 if.app-id = 'org.filezilla-project.filezilla'
 run = ['move-node-to-workspace D', 'layout accordion']
+
+[[on-window-detected]]
+if.app-id = 'com.docker.docker'
+run = ['move-node-to-workspace D', 'layout accordion']
