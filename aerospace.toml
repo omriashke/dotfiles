@@ -70,13 +70,17 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-s = 'move-node-to-workspace S'
     alt-shift-t = 'move-node-to-workspace T'
     alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-g = 'move-node-to-workspace G'
     alt-shift-x = 'move-node-to-workspace X'
 
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-    alt-0 = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh'
-    alt-9 = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh dither'
+    alt-0 = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh negative'
+    alt-9 = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh starfield-colors'
+    alt-8 = 'exec-and-forget ~/Development/dotfiles/toggle-ghostty-shader.sh dither'
+
+    alt-g = 'workspace G'
 
     alt-shift-semicolon = 'mode service'
 
@@ -116,8 +120,8 @@ if.app-id = 'NMPQX8QV9B.Earnit'
 run = "move-node-to-workspace A"
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'finder'
-run = 'layout floating'
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
