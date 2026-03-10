@@ -26,8 +26,8 @@ shell-integration-features = true
 
 link-url = true
 
-# Shader config (optional file — delete to disable shaders, recreate to enable)
-config-file = ?shaders.conf
+custom-shader = /Users/omriaskenazi/Development/dotfiles/shaders/dither.glsl
+custom-shader-animation = true
 
 keybind = cmd+shift+space=toggle_quick_terminal
 keybind = cmd+shift+comma=reload_config
