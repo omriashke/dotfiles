@@ -8,13 +8,22 @@ if [ ! -f "$SHADER" ]; then
     exit 1
 fi
 
-if grep -q "^custom-shader" "$CONFIG"; then
-    sed -i '' 's/^custom-shader/# custom-shader/' "$CONFIG"
+CURRENT=$(grep "^custom-shader = " "$CONFIG" | head -1 | sed 's/custom-shader = //')
+
+if [ "$CURRENT" = "$SHADER" ]; then
+    # Same shader is active — toggle it off
+    sed -i '' "s|^custom-shader = .*|# custom-shader = ${SHADER}|" "$CONFIG"
+    sed -i '' 's/^custom-shader-animation/# custom-shader-animation/' "$CONFIG"
     echo "Shaders disabled"
+elif [ -n "$CURRENT" ]; then
+    # Different shader is active — switch to the new one
+    sed -i '' "s|^custom-shader = .*|custom-shader = ${SHADER}|" "$CONFIG"
+    echo "Shader switched: $SHADER_NAME"
 else
+    # Shaders are disabled — enable with the requested shader
     sed -i '' "s|^# custom-shader = .*|custom-shader = ${SHADER}|" "$CONFIG"
     sed -i '' 's/^# custom-shader-animation/custom-shader-animation/' "$CONFIG"
-    echo "Shaders enabled: $SHADER_NAME"
+    echo "Shader enabled: $SHADER_NAME"
 fi
 
 pkill -USR2 ghostty
