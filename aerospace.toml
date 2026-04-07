@@ -46,6 +46,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-3 = 'workspace 3'
     alt-4 = 'workspace 4'
     alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
     alt-a = 'workspace A'
     alt-b = 'workspace B'
     alt-d = 'workspace D'
@@ -61,6 +63,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-3 = 'move-node-to-workspace 3'
     alt-shift-4 = 'move-node-to-workspace 4'
     alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-a = 'move-node-to-workspace A'
     alt-shift-b = 'move-node-to-workspace B'
     alt-shift-d = 'move-node-to-workspace D'
@@ -98,10 +102,7 @@ automatically-unhide-macos-hidden-apps = true
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
     b = ['exec-and-forget ~/Development/dotfiles/open-chrome-here.sh', 'mode main']
-
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = "move-node-to-workspace T"
+    t = ['exec-and-forget ~/Development/dotfiles/open-ghostty-here.sh', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'com.openai.chat'

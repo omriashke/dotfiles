@@ -26,15 +26,16 @@ shell-integration-features = true
 
 link-url = true
 
-custom-shader = /Users/omriaskenazi/Development/dotfiles/shaders/dither.glsl
-custom-shader-animation = true
+# custom-shader = /Users/omriaskenazi/Development/dotfiles/shaders/dither.glsl
+# custom-shader-animation = true
 
-keybind = cmd+shift+space=toggle_quick_terminal
-keybind = cmd+shift+comma=reload_config
+keybind = ctrl+shift+space=toggle_quick_terminal
+keybind = ctrl+shift+comma=reload_config
 
-keybind = super+ctrl+h=goto_split:left
-keybind = super+ctrl+j=goto_split:down
-keybind = super+ctrl+k=goto_split:up
-keybind = super+ctrl+l=goto_split:right
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
 
-keybind = ctrl+z=toggle_split_zoom
+keybind = ctrl+shift+z=toggle_split_zoom
+
